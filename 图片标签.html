@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片标签</title>
+</head>
+<body>
+    <p>刻晴<img src="./image/97455231_p0_master1200.jpg"></p>
+    <!--能插入的图片类型
+能够插入的图片类型是：jpg(jpeg)、gif、png、bmp等。
+
+不能往网页中插入的图片格式是：psd、ai等。
+
+HTML页面不是直接插入图片，而是插入图片的引用地址，所以要先把图片上传到服务器上。-->
+
+
+    <!--图片的路径
+    相对路径：相对当前页面所在的路径
+    .代表当前目录
+    ..代表上一级目录
+    -->
+    <p>当前目录的图片<img src="20211117025350713.jpg"></p>
+    
+    <p>当前目录并列一个文件夹,里面有刻晴的图片
+        <img src="image/97455231_p0_master1200.jpg">
+    </p>
+    <p>看看能不能放其他图片<img src="image/FcYFpANWQAATysf.jfif">
+    </p>
+    <p>
+        <a href="document/work/myweb/1.html">跳转到 myweb下的html文件</a>
+    </p>
+    <p>
+        打不开的图片<img src="https://www.yeitu.com/dongman/cosplay/20160416_10814_18.html" alt="美女图片" >
+    </p>
+    <!--图片的属性
+    width height属性   图像高宽度
+重要提示：如果要想保证图片等比例缩放，请只设置width和height中其中一个
+Alt属性  altalternate替代  图像无法显示时，显示文字告知图片的内容
+title属性  提示性文本 鼠标悬停时显示文字
+align属性 图片与周围文字的相对位置   bottom（默认）  top left right center
+-->
+    <div>
+        <p>
+            原神<img src="image/97455231_p0_master1200.jpg" align="top" width="100%">刻晴
+            <!-- center   图片与文字在水平方向上居中对齐
+            left right 图片在文字左边 右边
+            top 图片与文字在顶端对齐-->
+        </p>
+    </div>
+</body>
+</html>
