@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习框架</title>
+</head>
+
+    <!--框架标签不能放在<body>标签里面，因为<body>标签代表的只是一个页面，而框架标签代表的是多个页面。
+        于是：<frameset>和<body>只能二选一。
+框架的集合用<frameset>表示，然后在<frameset>集合里放入一个一个的框架<frame>-->
+
+<!--
+    <frameset>框架集合标签
+    <frame>框架标签  属性scrolling 是否需要滚动条  默认为true
+                    noresize 不可以改变框架大小  默认下框架大小可移动，有这个属性后，框架大小将固定
+                    frameborder  0  1  隐藏显示框架线
+                    name 给框架取名字 可进行超链接
+-->
+
+<!--rows代表水平分割  cols代表竖直分割  *代表剩余的占比-->
+<frameset rows="20%,*">  <!--这里面包含了两个框架，第一个框架占20%，第二个占剩下的80%-->
+    <frame src="001.html"  frameborder="0" ></frame><!--第一个框架-->
+    <frameset cols="30%,*">         <!--第二个框架是个框架集合，在这个框架集合内竖直分割了两个框架-->
+        <frame src="https://www.runoob.com/html/html-iframes.html" scrolling="no" frameborder="0"></frame>
+        <frame src="document/work/myweb/1.html"  frameborder="0" name="右下角的框架"></frame>
+    </frameset>
+
+</frameset>
+</html>

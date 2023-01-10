@@ -101,16 +101,126 @@
 cellpadding：单元格内容到边的距离，像素为单位。默认情况下，文字是紧挨着左边那条线的，即默认情况下的值为0。 注意不是单元格内容到四条边的距离哈，而是到一条边的距离，默认是与左边那条线的距离。如果设置属性dir="rtl"，那就指的是内容到右边那条线的距离。
 cellspacing：单元格和单元格之间的距离（外边距），像素为单位。默认情况下的值为0   -->
     <table border="2" bordercolor="red" align="center" bgcolor="yellow" background="image\97455231_p0_master1200.jpg">
-        <tr>
+        <p>两行三列的表格</p>
+        <tr dir="rtl" height="50%" align="left" valign="top">
+            <!--tr的属性
+            dir公有属性  控制这一行单元格内容的排列方式
+        bgcolor  这一行单元格的背景色
+    align  一行的内容水平排列方式
+    valign 一行的内容竖直排列方式
+height 一行的高度-->
             <td>1</td>
             <td>2</td>
             <td>3</td>
         </tr>
         <tr>
             <td>4</td>
+            <!--td的属性
+            单元格合并 colspan  横向合并  rowspan纵向合并-->
             <td>5</td>
             <td>6</td>
         </tr>
     </table>
+    <hr>
+    <table border="1">
+        <tr>
+            <td>蔡徐坤</td>
+            <td>男</td>
+            <td>中国</td>
+        </tr>
+        <tr>
+            <td>坤坤</td>
+            <td colspan="2">鸡你太美</td>
+        </tr>
+    </table >
+    <hr>
+    <table border="1">
+        <tr>
+            <td rowspan="2">蔡徐坤</td>
+            <td>坤坤</td>
+            <td>鸡你太美</td>
+            <td>食不食油饼</td>
+            <th>giegie</th>
+        </tr>
+        <tr>
+            
+            <td>香精煎鱼</td>
+            <td>香翅捞饭</td>
+            <td>荔枝</td>
+            <th>有没有树枝</th>
+        </tr>
+    </table>
+    <p>th标签  加粗的单元格</p>
+    <p>caption标签  表格的标题  align属性 标题相对于表格的位置</p>
+    <table border="1">
+        <caption >个人信息</caption>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+    </table>
+    <hr>
+    <p>表格的thead tbody tfoot 标签</p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th colspan="5">这是头部</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr >
+                <th colspan="5">这是脚部</th>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>蔡徐坤</td>
+                <td>肖战</td>
+                <td>郑爽</td>
+                <td>吴亦凡</td>
+                <td>李易峰</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h1>框架标签  可以在一个网页显示多个页面 </h1>
+    <p><a href="框架.html" target="_blank">跳转到学习框架的html文件</a></p>
+    <p><a href="表单.html" target="_blank">跳转到学习表单的html文件</a></p>
 </body>
 </html>

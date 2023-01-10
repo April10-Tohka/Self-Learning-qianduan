@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习表单</title>
+</head>
+<body>
+    <!--表单标签<form> 用于与服务器交互 表单就是收集用户信息
+        属性 name id  表单的名称    用于JS来控制或操作时使用
+        action 指定表单数据的处理程序  一般PHP如action="login.php"
+        method 表单数据提交的方式 get  post-->
+
+    <!--输入标签<input> (文本框)
+    type=  text password radio单选按钮 CheckBox多选按钮
+    checked 将单选按钮或多选按钮默认为选中状态
+    value 文本框内默认的内容
+    size 文本框显示的字符数
+    disabled readonly 文本框只读，不可编辑  前者光标无法点击 后者光标可以点击
+
+-->
+    <h1>输入标签input(文本框)</h1>
+    <form>
+        姓名：<input type="text" value="呵呵"><br/>
+        昵称：<input value="哈哈" readonly><br>
+        名字: <input type="text" disabled value="景淑"><br>
+        密码：<input type="password" required><br>
+        性别：<input type="radio"  value="male" name="man" id="radio1" >男
+        <input type="radio" value="female" name="woman" id="radio2" checked>女<br>
+        爱好：<input type="checkbox" value="eat" name="eat">吃饭
+        <input type="checkbox" value="drink" name="drink">喝饮料
+        <input type="checkbox" value="cross dress" name="cd" >变装
+        <br>
+        <h1 style="color: rgb(255, 74, 71); background-color: yellow;">注意：各个input标签的name属性可以相同，但id属性是唯一的</h1>
+        <h1>按钮举例：</h1><br>
+        <input type="button" value="普通按钮"><br>
+        <input type="submit" value="提交按钮"><br>
+        <input type="reset" value="重置按钮"><br>
+        <input type="image" value="图片按钮1" src="image/Fj9LLTwVEAAwfhz.jfif" width="50%"><br>
+        <input type="image" value="图片按钮2" src="image/97455231_p0_master1200.jpg" width="50%"><br>
+        <input type="file" value="文件按钮"><br>
+
+
+    </form>
+    <hr size="10" color="red">
+    <h1>下拉列表标签select</h1>
+    <!--select属性
+    multiple：可以对下拉列表中的选项进行多选。属性值为 multiple，也可以没有属性值
+    size:如果属性>1,则列表为滚动视图 1为下拉视图-->
+   <!--option属性
+    selected 预选中-->
+    <form>
+        <select>
+            <option>小学</option>
+            <option>初中</option>
+            <option>高中</option>
+            <option>大学</option>
+            <option selected>研究生</option>
+        </select>
+        <br><br><br>
+
+
+        <select size="2">
+            <option>小学</option>
+            <option>初中</option>
+            <option>高中</option>
+            <option>大学</option>
+            <option selected>研究生</option>
+        </select>
+        <br><br><br>
+
+
+
+        <select multiple="multiple" >
+            <option>小学</option>
+            <option>初中</option>
+            <option selected>高中</option>
+            <option selected>大学</option>
+            <option >研究生</option>
+        </select>
+    </form>
+    <!--<textarea>标签多行文本输入框
+        属性 rows 指定文本区域的行数
+        cols 指定文本区域的列数
+    readonly 只读-->
+    <hr>
+    <form>
+
+    
+    <textarea rows="4" cols="20">
+        前端开发工程师，重点关心页面的美、样式、板式、交互。至于数据的提供和比较重的业务逻辑，都是后台工程师做的事情。
+    </textarea>
+    <textarea>
+        1、不爱摄影不懂设计的程序猿不是一个好的产品经理
+    </textarea>
+    </form>
+
+    <!--我们在注册一个网站的信息的时候，有一部分是必填信息，有一部分是选填信息，这个时候可以利用表单的语义化
+    比如：-->
+    <form>
+        <fieldset>
+            <legend>账号信息</legend>
+            
+            姓名：<input type="text" ><br>
+            密码：<input type="password"  required>
+        </fieldset>
+        <fieldset>
+            <legend>其他信息</legend>
+            性别：<input type="radio" name="gender" value="male" checked>男
+            <input type="radio" name="gender" value="female">女<br>
+            爱好：<input type="checkbox" name="love" value="eat">吃饭
+            <input type="checkbox" name="love" value="sleep">睡觉
+            <input type="checkbox" name="love" value="dress" required>女装<br>
+            <input type="submit" name="submit" value="提交">
+        </fieldset>
+    </form>
+    <hr>
+    <div style="background-color: violet;">
+        <!--    <label>标签     -->
+        <form>
+            <input type="radio" name="gender">男
+            <input type="radio" name="gender">女
+        </form>   
+        <p>
+            对上面的单选框，只有点击小圆圈才可以选中，点击 男  女 这两个文字是无法选中的
+            于是，label标签排上用场
+        </p>
+        <form>
+            解决方法：<br>
+            <input type="radio" name="gender" id="man"><label for="man">男</label>
+            <input type="radio" name="gender" id="woman"><label for="woman">女</label>
+            <p>
+                    让label标签的for属性与input标签的id属性相同，则这个label与input就有绑定关系
+            </p>
+            <br>
+            下面是两者属性不同：<br>
+            <input type="radio" name="gender" id="man"><label for="nan">男性</label>
+            <input type="radio" name="gender" id="woman"><label for="nv">女性</label>
+            <p>checkbox也有label  
+                
+            </p>
+            <input type="checkbox" name="love" id="eat" value="eat"><label for="eat">吃饭</label>
+    
+            <input type="checkbox" name="love" value="sleep" id="sleep"><label for="sleep"> 睡觉</label>
+            <input type="checkbox" name="love" value="dress" id="dress" ><label for="dress">女装</label><br>
+            <span style="color: red ;background-color: yellow; ">任何表单元素都有label</span>
+            <br>
+        </form>
+    </div>
+    <div style="background-color: aqua;">
+        <h1>多媒体标签</h1>
+        <p>
+            audio标签 播放背景音乐<br>
+            属性:src  loop循环播放次数 -1代表单曲循环
+        </p>
+        请欣赏我家geigei的music<br>
+        <audio controls autoplay>
+            
+            <source src="music/SWIN-S - 只因你太美.flac"  >
+            
+        </audio>
+        <hr>
+        
+
+    </div>
+    
+</body>
+</html>
