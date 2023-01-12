@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            
+        }
+        .p1{
+            color: red;
+            size: 10pt;
+        }
+        .tip{
+            background-color: yellow;
+            color: red;
+            text-align: center;
+            text-shadow: 1;
+        }
+        .one{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            border: 1px solid #000;
+        }
+        .two{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            left: 300px;
+            top: 100px;
+            border: 1px solid #000;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="tip">由于还没有学习JavaScript，script代码就都是复制过来，先跳过先</h1>
+    <p>为元素添加draggable=true来进行拖拽操作</p>
+    <div  class="box" draggable="true">
+        
+    </div>
+    <p>拖拽之后能干嘛呢，这涉及到事件监听</p>
+    <p class="p1">拖拽元素的事件监听:<br>
+        ondragstart当拖拽开始时调用<br>
+
+        ondragleave 当鼠标离开拖拽元素时调用<br>
+        
+        ondragend 当拖拽结束时调用<br>
+        
+        ondrag 整个拖拽过程都会调用</p>
+
+    <script>
+        var box = document.querySelector('.box');
+    
+        //  绑定拖拽事件
+    
+        //  拖拽开始
+        box.ondragstart = function () {
+            console.log('拖拽开始.');
+        }
+    
+        //  拖拽离开：鼠标拖拽时离开被拖拽的元素时触发
+        box.ondragleave = function () {
+            console.log('拖拽离开..');
+        }
+    
+        //  拖拽结束
+        box.ondragend = function () {
+            console.log('拖拽结束...');
+            console.log("---------------");
+        }
+    
+        box.ondrag = function () {
+            console.log('拖拽');
+        }
+    
+    </script>
+    <hr>
+    <p>2、目标元素
+        比如说，你想把元素A拖拽到元素B里，那么元素B就是目标元素。
+        
+        页面中任何一个元素都可以成为目标元素</p>
+    <div class="one" draggable="true">
+
+    </div>
+    <div class="two"></div>
+    <script>
+        var two = document.querySelector('.two');
+    
+        //目标元素的拖拽事件
+    
+        // 当被拖拽元素进入时触发
+        two.ondragenter = function () {
+            console.log("来了.");
+        }
+    
+        // 当被拖拽元素离开时触发
+        two.ondragleave = function () {
+    
+            console.log("走了..");
+        }
+    
+        // 当拖拽元素在 目标元素上时，连续触发
+        two.ondragover = function (e) {
+            //阻止拖拽事件的默认行为
+            e.preventDefault(); //【重要】一定要加这一行代码，否则，后面的方法 ondrop() 无法触发。
+            //如果想让拖拽元素在目标元素里做点事情，就必须要在 ondragover() 里加event.preventDefault()这一行代码
+            console.log("over...");
+        }
+    
+        // 当在目标元素上松开鼠标是触发
+        two.ondrop = function () {
+            console.log("松开鼠标了....");
+        }
+    </script>
+    <p>案例：拖拽练习代码
+        <iframe src="案例拖拽练习.html"></iframe>
+    </p>
+</body>
+</html>

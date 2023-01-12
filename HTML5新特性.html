@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5新特性</title>
+</head>
+<body>
+    <!--头部-->
+    <header>
+        <ul class="nav"></ul>
+    </header>
+    <!--主体部分-->
+    <div class="main">
+        <!--文章-->
+        <article></article>
+        <!--侧边栏-->
+        <aside></aside>
+    </div>
+    <!--底部-->
+    <footer>
+
+    </footer>
+    <form>
+        <fieldset>
+            <legend>新增的表单类型</legend>
+            <label for="">
+                email:<input type="email" name="email" required><br>
+            </label>
+            <br>
+            <label for="">
+                拾色器color:<input type="color" name="color"><br>
+            </label>
+            <label for="">
+                time:<input type="time" name="time"><br>
+            </label>
+            <label for="">
+                拖动条:<input type="range" name="range"><br>
+            </label>
+        </fieldset>
+    </form>
+    <hr>
+    <h1>数据列表</h1>
+    <form>
+        <fieldset>
+            <legend>学历</legend>
+            <input type="text" list="mydata">
+            <datalist id="mydata" name="datalist">
+                <option>小学生</option>
+                <option>初中生</option>
+                <option>高中生</option>
+                <option>本科生</option>
+                <option>硕士研究生</option>
+                <option>博士研究生</option>
+            </datalist>
+            <input type="password" placeholder="输入密码"><!--表单属性placehold 提示文字-->
+
+        </fieldset>
+    </form>
+    <hr>
+    <h1 style="color: tomato; size: 36;">表单事件oninput  用户输入内容时触发，可用于输入字数统计。<br>
+            oninvalid     验证不通过时触发。比如，如果验证不通过时，想弹出一段提示文字，就可以用到它
+    </h1>
+    <iframe src="表单事件oninput oninvalid.html">
+
+    </iframe>
+    <hr>
+    <h1>多媒体标签</h1>
+    <div style="background-color: aqua;">
+        听我家geigei唱歌
+        <audio controls autoplay>
+            <source src="music/SWIN-S - 只因你太美.flac">
+        </audio>
+        看我家geigei跳舞
+        <video controls >
+            <source src="">
+        </video>
+        DOM操作
+        <iframe src="DOM操作.html">
+            
+        </iframe>
+    </div>
+
+</body>
+</html>
