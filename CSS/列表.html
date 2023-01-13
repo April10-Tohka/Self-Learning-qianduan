@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*更改列表项标记类型*/
+        ul.a
+        {
+           list-style-type: circle;
+        }
+        ul.b
+        {
+            list-style-type: upper-roman;
+        }
+        ol.c
+        {
+            list-style-type: square;
+        }
+        ol.d
+        {
+            list-style-type: none;
+        }
+        ol.d li
+        {
+            color: red;
+            background-color: yellow;
+            background-image: url(../image/FcYFpANWQAATysf.jfif);
+            background-repeat: no-repeat;
+            padding-left: 36px;
+            padding-top: 20px;
+        }
+        ol.demo
+        {
+            list-style-type: none;/*移除列表项标记*/
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>无序列表实例:</h1>
+    <ul class="a">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ul>
+    <br>
+    <ul class="b">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ul><br>
+    <h1>有序列表实例:</h1>
+    <ol class="c">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ol>
+    <br>
+    <ol class="d">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ol>
+    <br>
+    默认设置:
+    <ol >
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ol>
+    移除默认设置:
+    <ol class="demo">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ol>
+
+</body>
+</html>

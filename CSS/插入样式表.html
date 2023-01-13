@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mycss.css" ><!--插入外部样式表-->
+    <style>
+        /* 内部样式表 */
+        h1
+        {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>标题1</h1>
+    <h2 style="color: yellow;">标题2</h2><!--内联样式-->
+    <p>段落</p>
+    <p>多重样式优先级   内联>内部>外部
+        但是会有自上而下的顺序<br>
+        外部在内部前面<iframe src="外部在内部前面.html"></iframe>
+        内部在外部前面<iframe src="内部在外部的前面.html"></iframe>
+    </p>
+</body>
+</html>

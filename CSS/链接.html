@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        pre
+        {
+            font-size: 24px;
+            margin-left: -30px;
+            
+            color: red;
+            background-color: yellow;
+        }
+        a:link/*这属于什么选择器 伪类选择器？*/
+        {
+            color: black;
+            text-decoration: none;
+        }
+        a:visited
+        {
+            color: blue;
+            text-decoration: none;
+        }
+        a:hover
+        {
+            color: yellow;
+        }
+        a:active
+        {
+            color: green;
+        }
+        /*one*/
+        a.one:link
+        {
+            color: blue;
+        }
+        a.one:visited
+        {
+
+        }
+        a.one:hover
+        {
+            color: rgb(216, 13, 87);
+        }
+
+        a.one:active
+        {
+            
+        }
+        /*two*/
+        a.two:hover
+        {
+            font-size: 36px;
+            color: black;
+        }
+        /*three*/
+        a.three:hover
+        {
+            background-color: yellowgreen;
+        }
+        /*four*/
+        a.four:hover
+        {
+            font-family: "华文楷体";
+            color: black;
+        }
+        /*five*/
+        a.five:hover
+        {
+            text-decoration: line-through;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        链接的样式：
+    a:link - 正常，未访问过的链接
+    a:visited - 用户已访问过的链接
+    a:hover - 当用户鼠标放在链接上时
+    a:active - 链接被点击的那一刻
+    </pre>
+    <a href="https://www.runoob.com/css/css-link.html" target="_blank">css链接</a>
+    <hr>
+    <p><b><a class="one" href="/css/" target="_blank">这个链接改变颜色</a></b></p>
+    <p><b><a class="two" href="/css/" target="_blank">这个链接改变字体大小</a></b></p>
+    <p><b><a class="three" href="/css/" target="_blank">这个链接改变背景颜色</a></b></p>
+    <p><b><a class="four" href="/css/" target="_blank">这个链接改变字体类型</a></b></p>
+    <p><b><a class="five" href="/css/" target="_blank">这个链接改变文字修饰</a></b></p>
+    
+</body>
+</html>

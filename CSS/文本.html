@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .uppercase
+        {
+            text-transform: uppercase;
+        }
+        .lowercase
+        {
+            text-transform: lowercase;
+        }
+        .captilize
+        {
+            text-transform: capitalize;
+        }
+        .suojin
+        {
+            text-indent: 150px;/*控制文本第一行的缩进*/
+        }
+        .shdow
+        {
+            text-shadow: 2px 2px red;
+        }
+        .shdow1/*文字阴影模糊效果*/
+        {
+            text-shadow: 2px 2px 8px #FF0000;
+        }
+        .shdow2/*白色阴影*/
+        {
+            color: white;
+            text-shadow:2px 2px 4px #000000;
+        }
+        .shdow3/*霓虹灯文本阴影*/
+        {
+            text-shadow:0 0 3px #FF0000;
+        }
+    </style>
+</head>
+<body>
+    <h2>文本转换 一段文本字母大小写</h2>
+    <p class="uppercase">全部字母转为大写 this is a text</p>
+    <p class="lowercase">全部字母转为小写 THIS is a text</p>
+    <p class="captilize">首字母大写 this is a text</p>
+    <hr>
+    <h2>文本缩进  控制第一行文本的缩进</h2>
+    <p class="suojin">In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'</p>
+    <hr>
+    <p class="shdow">为文本添加阴影</p>
+    <p>text-shdow属性 <span style="color: red; background-color: yellow;">水平阴影位置 竖直阴影位置</span> 模糊距离 阴影颜色</p>
+    <h1 class="shdow1">Text-shadow with blur effect</h1>
+    <h1 class="shdow2">Text-shadow on white text</h1>
+    <h1 class="shdow3">Text-shadow with neon glow</h1>
+</body>
+</html>

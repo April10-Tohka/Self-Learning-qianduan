@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img.one
+        {
+            float:right;
+        }
+        div.div1 img
+        {
+            float: left;
+            width: 110px;
+            height: 90px;
+            margin: 5px;
+        }
+        div.div1
+        {
+            
+            background-image: url(../image/20211117025350713.jpg);
+            margin-bottom: 50px;
+        }
+        h1.content1
+        {
+            clear: both; 
+            /*元素浮动之后，周围的元素会重新排列，为了避免这种情况，使用 clear 属性。
+            clear 属性指定元素两侧不能出现浮动元素。*/
+            margin-bottom: 50px;
+        }
+        div.div2
+        {
+            margin-top: 50px;
+        }
+        div.div2 img
+        {
+            border: 2px solid tomato;
+            float: right;
+            
+            margin-top: 0;
+            margin-right: 0;
+            margin-bottom: 15px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>flow用于图像，使元素左右移动，周围的元素也重新排列</h1>
+    <img src="../image/97455231_p0_master1200.jpg" alt="刻晴" title="刻晴" width="95" height="108" class="one">这是一些文本。这是一些文本。这是一些文本。
+    这是一些文本。这是一些文本。这是一些文本。
+    这是一些文本。这是一些文本。这是一些文本。
+    这是一些文本。这是一些文本。这是一些文本。
+    这是一些文本。这是一些文本。这是一些文本。
+    这是一些文本。这是一些文本。这是一些文本。
+    这是一些文本。这是一些文本。这是一些文本。
+    这是一些文本。这是一些文本。这是一些文本。
+    这是一些文本。这是一些文本。这是一些文本。
+    这是一些文本。这是一些文本。这是一些文本。添加了<b>float：right</b>使得图片浮动到段落右边
+    <br>
+    <img src="../image/97455231_p0_master1200.jpg" alt="刻晴" title="刻晴"  width="108" height="208" >
+    <hr>
+    <div class="div1">
+
+    
+    <h1>图片库</h1>
+    <p>如果把几个浮动的元素放到一起，如果有空间的话，它们将彼此相邻</p>
+    <p>试着调整窗口,看看当图片没有足够的空间会发生什么</p>
+    <img src="../image/97455231_p0_master1200.jpg" alt="" width="100" height="200">
+    <img src="../image/FcYFpANWQAATysf.jfif" alt="" width="100" height="200">
+    <img src="../image/FeuqyMsUoAIMcPy.jfif" alt="" width="100" height="200">
+    <img src="../image/FfibtaHWQAMstvC.jfif" alt="" width="100" height="200">
+    <img src="../image/Fj4tP05UUAIcKtU.jfif" alt="" width="100" height="200">
+    <img src="../image/Fj9LLTwVEAAwfhz.jfif" alt="" width="100" height="200">
+    <img src="../image/FjhTq6KacAAsznO.jfif" alt="" width="100" height="200">
+    <img src="../image/FjvvAy5XoAA-kdb.jfif" alt="" width="100" height="200">
+    <h1 class="content1">好色啊</h1>
+        <div class="div1" >
+
+    
+        <img src="../image/FjxCTM8UoAAV07O.jfif" alt="" width="100" height="200">
+        <img src="../image/Fk43ZgYaEAEpG3C.jfif" alt="" width="100" height="200">
+        <img src="../image/FkAmAqnaMAA9LLx.jfif" alt="" width="100" height="200">
+        <img src="../image/FkLek6oacAAlReL.jfif" alt="" width="100" height="200">
+        </div>
+    </div>
+    <br><br><br><br><br><br><br>
+    
+    <div class="div2">
+        <h1>为图像添加边框和边距并浮动到段落右侧</h1>
+        <p>
+            <img src="../image/97455231_p0_master1200.jpg" width="95" height="84"  class="keqing"/>
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            
+        </p>
+    </div>
+</body>
+</html>

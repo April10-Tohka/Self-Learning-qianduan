@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<!--
+    例如：
+         <style>
+        h1
+        {
+            color: green;
+        }
+        h2
+        {
+            color: green;
+        }
+        p
+        {
+            color: green;
+        }
+    </style>
+    为了尽量减少代码，使用分组选择器
+
+-->
+    <style>
+        h1,h2,p /*用,间隔*/
+        {
+            color: green;
+            text-align: center;
+            font-family: "华文楷体";
+            font-size: 30px;
+        }
+        h3/*为所有的 h3元素 定义样式*/
+        {
+            color: blue;
+        }
+        h3.center/*为 h3标签所有class=center的元素 定义样式*/
+        {
+            text-align: center;
+        }
+        .control h4/*为 class=control里的h4标签 定义样式*/
+        {
+            text-align: right;
+            background-color: violet;
+        }
+        ul.one li.yi/*为 ul标签所有class=one里的li标签里的class=yi的元素 定义样式*/
+        {
+            text-align: right;
+            background-color: yellow;
+            color: red;
+            font-size: 36px;
+            font-family: "华文楷体";
+            list-style: square;
+            list-style-image: url(../image/97455231_p0_master1200.jpg);
+        }
+    </style>
+</head>
+<body>
+    <h1>标题1</h1>
+    <h2>标题2</h2>
+    <p>段落1</p>
+    <h3>标题3</h3>
+    嵌套选择器:<br>
+    <h4>这是没有任何样式的h4</h4>
+    <div class="control">
+        <h3>标题三</h3>
+        <h3 class="center">这个标题不仅文字颜色为蓝色，同时居中</h3>
+        <h4>这是在div里的h4</h4>
+    </div>
+    <hr>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+    </ul>
+    <hr>
+    <ul class="one">
+        <li>3</li>
+        <li class="yi">华文楷体且背景色为黄色，右对齐，字体为红色 36px大小</li>
+    </ul>
+</body>
+</html>
