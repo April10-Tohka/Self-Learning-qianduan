@@ -135,19 +135,27 @@ for(var i=0;i<acc.length;i++)
 // window.onscroll事件是在窗口滚动时触发
 window.onscroll=function()
 {
+    //获取header模块
     var top=document.getElementById("top");
+    // 获取回到顶部元素
     var return_top=document.getElementById("return-top");
+    // documentElement应该是根元素，获取距离窗口顶部的距离
     let high=document.documentElement.scrollTop;
     
+    var home=document.querySelector('#home');
     if(high>100)
     {
         return_top.style.display='block';
         top.classList.add("nav-fixed");
+        //高亮home
+        home.style.color='#F42A2A';
     }
     else if(high==0)
     {
         return_top.style.display='none';
         top.classList.remove("nav-fixed");
+        //取消高亮home
+        home.style.color='#fff';
     }
 
 }
@@ -155,7 +163,7 @@ window.onscroll=function()
 function pageScroll()
 {
     // scrollBy() 会使元素每隔一秒从当前的滚动条位置向下滚动10px，这是一个设置相对滚动条位置的方法。
-    window.scrollBy(0,-300);
+    window.scrollBy(0,-500);
     // 每隔0.1s调用一次该函数
     var scrolldelay=setTimeout(pageScroll,100);
     var high=document.documentElement.scrollTop;

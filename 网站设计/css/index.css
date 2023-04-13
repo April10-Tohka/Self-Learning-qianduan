@@ -1,36 +1,16 @@
+:root
+{
+    /* 图文模块2的 按钮跟隐藏文本的宽度一致 */
+    --accordion_panel:600px 
+}
 .header
 {
     width: 100%;
     height: 100px;
-    /* 记得换下背景色 */
+    /* 记得换下背景色 同时带了点透视 */
     background-color: rgba(0, 0, 0,0.5);
     position: relative;
-    transition: all 0.4s;
-}
-
-/* 当导航栏添加了nav-fixed类时 */
-.nav-fixed
-{
-    
-    position: fixed;
-    height: 80px;
-    /* 记得换下背景色 */
-    background-color: #47b2e4;
-    z-index: 1000;
-    
-}
-/* 导航栏添加了nav-fixed后，logo模块和nav模块的定位也要改变，因为header高度变了 */
-.nav-fixed .logo
-{
-    top: 17px;
-}
-.nav-fixed .nav
-{
-    top: 33px;
-}
-.nav-fixed .theme-change
-{
-    top: 17px;
+    transition: all 0.5s;
 }
 
 /* 版心 */
@@ -79,8 +59,8 @@
     font-weight: 400;
 }
 
-/* 更换主题背景色 */
-.theme-change
+/* 更换主题背景色   做不出来*/
+/* .theme-change
 {
     width: 50px;
     height: 50px;
@@ -97,6 +77,33 @@
     border-radius: 50%;
     border: none;
     cursor: pointer;
+} */
+
+/* 当导航栏添加了nav-fixed类时 */
+.nav-fixed
+{
+    
+    position: fixed;
+    height: 80px;
+    /* 记得换下背景色 */
+    background:  rgba(40, 58, 90, 0.9);
+    z-index: 1000;
+    
+}
+/* 导航栏添加了nav-fixed后，logo模块和nav模块的定位也要改变，因为header高度变了 */
+.nav-fixed .logo
+{
+    top: 17px;
+}
+.nav-fixed .nav
+{
+    top: 33px;
+}
+
+/* 鼠标停在导航栏时，高亮文字 */
+.header .nav ul li a:hover
+{
+    color: #F42A2A;
 }
 
 
@@ -110,6 +117,11 @@
     margin: auto;
 }
 
+/* 固定下所有幻灯片的高度  那就固定图片的高度 */
+.slideshow-container .mySlides img
+{
+    height: 800px;
+}
 /* 下一张  上一张 按钮 */
 .prev,.next
 {
@@ -176,13 +188,13 @@
 {
     background-color: #717171;
 }
-/* 淡出动画 */
+/* 幻灯片应用淡出动画 */
 .fade
 {
     animation: fade 1.5s;
 }
 
-/* 设置动画 */
+/* 设置淡出动画 */
 @keyframes fade
 {
     from{opacity: 0.4;}
@@ -220,8 +232,26 @@
     border: 0;
     border-radius: 12px;
     margin-top: 42px;
+    cursor: pointer;
 }
-
+/* 给图片添加个上下移动的动画 */
+.img-animate
+{
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+/* 图片上下移动动画 */
+@keyframes up-down
+{
+    /* 上下移动通过transform的translateY()方法来上下移动 */
+    0%
+    {
+        transform: translateY(10px);
+    }
+    100%
+    {
+        transform: translateY(-10px);
+    }
+}
 
 
 /* 图文模块2 */
@@ -230,15 +260,28 @@
     width: 100%;
     height: 790px;
     background-color: #f4f5fa;
+    position: relative;
 }
-
+/* 大标题样式 */
+.section2 .content h1
+{
+    font-weight: 400;
+    font-size: 34px;
+    color: #37517e;
+}
+/* 摘要样式 */
+.section2 .content p
+{
+    font-size: 15px;
+    color: #848484;
+}
 button.accordion
 {
     background-color: #eee;
     color: #444;
     cursor: pointer;
     padding: 18px;
-    width: 830px;
+    width: var(--accordion_panel);
     height: 83px;
     border: none;
     outline: none;
@@ -274,7 +317,7 @@ button.accordion.active::after
 /* panel样式 */
 div.panel
 {
-    width: 830px;
+    width: var(--accordion_panel);
     padding: 0 18px;
     background-color: #eee;
     max-height: 0;
@@ -292,8 +335,6 @@ div.article
     margin-bottom: 22px;
 }
 
-
-
 /* 声明字体图标 */
 @font-face
 {
@@ -307,12 +348,25 @@ div.article
     font-style: normal;
     font-display: block;
 }
+/* 图片模块作为图文模块2的背景 */
+.section2 .picture
+{
+    /* 宽高取决去背景图的大小  再来调位置 */
+    height: 600px;
+    width: 520px;
+    background: url(../img/portfolio-7.jpg);
+    position: absolute;
+    top: 80px;
+    right: 120px;
+}
+
+
 
 /* 回到顶部 */
 a.return-top
 {
-    /* display: none; */
-    display: block;
+    display: none;
+    
     width: 50px;
     height: 50px;
 
@@ -393,7 +447,7 @@ section.section3
     margin-top: 40px;
 }
 
-
+/* 设置报道时间样式 */
 .mt-4
 {
     display: inline-block;
@@ -402,6 +456,7 @@ section.section3
     font-weight: normal;
     color: #a18a7a;
 }
+/* 设置出处的样式 */
 a.author
 {
     font-size: 17px;
@@ -409,12 +464,19 @@ a.author
     font-weight: 600;
     color: #ff817f;
 }
+/* 文章的标题样式 */
 a.article-title
 {
     
     font-size: 26px;
     font-weight: 600;
     line-height: 34px;
+    transition: 0.3s ease-in-out;
+}
+/* 当鼠标停在文章标题时，高亮文字 */
+a.article-title:hover
+{
+    color: #F42A2A;
 }
 /* 文章的摘要样式 */
 .section3 .card-body p
@@ -437,12 +499,20 @@ a.article-title
     line-height: 30px;
     border-radius: 6px;
     margin-top: 27px;
+    cursor: pointer;
 }
+
 /* 固定card-head 图片的宽高 */
 .section3 .card-head img
 {
     width: 400px;
     height: 300px;
+}
+/* 当鼠标停在图片时，形成放大图片的效果 */
+.section3 .card-head img:hover
+{
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
 }
 /* card-body样式 */
 .section3 .card-body
