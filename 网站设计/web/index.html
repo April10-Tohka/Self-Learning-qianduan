@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入初始化样式 -->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- 网页图标 -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- 引入index样式 -->
+    <link rel="stylesheet" href="css/index.css">
+    <title>蕉蕉青年网</title>
+
+    <link href="img\11.png" rel="icon">
+    <link href="img\11.png" rel="apple-touch-icon">
+</head>
+<body>
+    
+    <!-- header模块 -->
+    <header class="header" id="top">
+        <div class="w">
+            <div class="logo">
+                <img src="img\12.png" alt="">
+                <h1>
+                    <a href="index.html">logo</a>
+                </h1>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html" id="home">主页</a></li>
+                    <li><a href="#xw">看一看</a></li>
+                </ul>
+                
+            </div>
+            <!-- 切换深夜模式看不懂做不出来 -->
+            <!-- <div class="theme-change">
+                <button onclick="changeTheme()">深色模式</button>
+            </div> -->
+        </div>
+        
+        
+    </header>
+
+
+    <!--自动播放图片模块  -->
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">点击回原新闻页查看更多</div>
+            <a href="https://www.rmzxb.com.cn/c/2022-10-20/3226263.shtml"><img src="https://www.rmzxb.com.cn/upload/resources/image/2022/10/21/2731628_1244x700c.jpg" alt="" style="width: 100%; "></a>
+            <div class="text">党的二十大主席团举行第二次会议 习近平主持会议</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">点击回原新闻页查看更多</div>
+            <a href="https://www.rmzxb.com.cn/c/2022-10-22/3227401.shtml"><img src="https://ts1.cn.mm.bing.net/th/id/R-C.b0a6692959df865be541108d68c5b52d?rik=uZx0f2m%2bqhIp%2fQ&riu=http%3a%2f%2fimg95.699pic.com%2fphoto%2f50056%2f4710.jpg_wh860.jpg&ehk=Bqb5WTe%2fMfAIeLHJL%2f43AUxomcu1Rbp%2bnQM8kHk91U8%3d&risl=&pid=ImgRaw&r=0" alt="" style="width: 100%;"></a>
+            <div class="text">伟大的现代化</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">点击回原新闻页查看更多</div>
+            <a href="https://www.rmzxb.com.cn/c/2022-10-22/3227642.shtml"><img src="https://www.rmzxb.com.cn/upload/resources/image/2022/10/22/2731670_1244x700c.jpg" alt="" style="width: 100%;"></a>
+            <div class="text">中国共产党第二十次全国代表大会在京闭幕 习近平主持大会并发表重要讲话</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&lt;</a>
+        <a class="next" onclick="plusSlides(1)">&gt;</a>
+    </div>
+    <br>
+
+    <div style="text-align: center;">
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+
+    <!-- 图文模块1 -->
+    <!-- <section class="our-story ">
+        <div class="w">
+            <div class="img">
+                <img src="img/portfolio-9.jpg" alt="" width="711px" height="382px" class="radius img-animate">
+            </div>
+            <div class="txt">
+                <h2 style="line-height: 24px;">OUR STORY</h2> 
+                <h1 style="line-height: 45px; color: #222627; font-size: 16px;">About Wildlive</h1>
+                <p style="line-height: 20px;margin-bottom: 42px; " >
+                    Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at tempufddfel. Learn more about our work! Lorem ipsum viverra feugiat.
+                </p> 
+                
+                <p style="line-height: 20px">
+                    Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at tempufddfel.
+                
+                </p> 
+               
+    
+    
+                <p class="arrow-icon" style="margin-top: 37px;">Pellen tesque libero ut justo</p>
+                <p class="arrow-icon">Lorem ipsum dolor sit amet elit</p>
+                <p class="arrow-icon">Pellen tesque libero ut justo</p>
+                <button>Read More</button>
+            </div>
+        </div> -->
+
+    </section>
+    <br><br>
+
+    <br><br>
+    <!-- 图文模块3 -->
+    <section class="section3">
+        <div class="w" id="xw">
+            <div class="mod-title">
+                <h2 >这里收集了一些有意思的文章，欢迎点击浏览！（一切版权归原文所有，小编仅做练习用）</h2>
+                <h1>看一看</h1>
+            </div>
+            <div class="container">
+                <div class="card1">
+                    <div class="card">
+                        <div class="card-head">
+                            <a href="fuye.html"><img src="https://pic.cyol.com/img/20230418/img_9614dff3f67393c3c3900c481266aecb19_c.jpg" alt="" width="400px" class="radius"></a>
+                        </div>
+                        <div class="card-body">
+                            <!-- 文章的时间 出处 -->
+                            <h6 class="mt-4">2023年04月18日</h6><a href="http://news.cyol.com/gb/articles/2023-04/18/content_dqB9KLc07V.html" class="author"> - 中国青年报客户端</a>
+                            <br><br>
+                            <!-- 文章的标题 -->
+                            <a href="fuye.html" class="article-title">年轻人如何应对人工智能挑战
+                            </a>
+                            <br></br>
+                            <!-- 文章的摘要 -->
+                            <p>年轻人如何应对人工智能挑战
+                            </p>
+                            <!-- 了解更多按钮 -->
+                            <button> <a href="fuye.html">了解更多</a> </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card2">
+                    <div class="card">
+                        <div class="card-head">
+                            <a href="fuye1.html"><img src="img\3.png" alt="" width="400px" class="radius"></a>
+                        </div>
+                        <div class="card-body">
+                            <!-- 文章的时间 出处 -->
+                            <h6 class="mt-4">2023年04月08日</h6><a href="https://www.chinanews.com.cn/cj/2023/04-08/9986208.shtml" class="author"> - 中国新闻网</a>
+                            <br><br>
+                            <!-- 文章的标题 -->
+                            <a href="fuye1.html" class="article-title">
+                                多国要调查ChatGPT ，TA碰了什么红线？
+                            </a>
+                            <br></br>
+                            <!-- 文章的摘要 -->
+                            <p>
+                                多国要调查ChatGPT ，TA碰了什么红线？
+                            </p>
+                            <!-- 了解更多按钮 -->
+                            <button><a href="fuye1.html">了解更多</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card3">
+                    <div class="card">
+                        <div class="card-head">
+                            <a href="fuye2.html"><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/926dS7RBTpYxdibZsPx1SnPySdTFJs7O2VmEdicabhMYz2kqItrhhNMvfDicKEo69Mubx1WQn4MRevPPzSRKyLeNg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="" width="400px" class="radius"></a>
+                        </div>
+                        <div class="card-body">
+                            <!-- 文章的时间 出处 -->
+                            <h6 class="mt-4">2023年04月06日</h6><a href="https://mp.weixin.qq.com/s/bdLxsKRaeSh8E-qnUQ4xPg" class="author"> - 上海交通大学公众号</a>
+                            <br><br>
+                            <!-- 文章的标题 -->
+                            <a href="fuye2.html" class="article-title">裸眼3D新亮相｜交大科研概念影片《创见未来》发布！
+                            </a>
+                            <br></br>
+                            <!-- 文章的摘要 -->
+                            <p>裸眼3D技术展现未来科技
+                            </p>
+                            <!-- 了解更多按钮 -->
+                            <button><a href="fuye2.html">了解更多</a></button>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+        
+    </section>
+
+    
+
+    
+        
+        
+
+    <!-- footer模块 -->
+    <footer class="footer">
+        
+        © Copyright 
+    </footer>
+
+    <!-- 回到顶部 --> 
+    <a class="return-top" id="return-top" onclick="pageScroll()"></a>
+ 
+
+
+
+
+    <script src="js/index.js"></script>
+</body>
+</html>
